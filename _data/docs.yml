@@ -1,0 +1,21 @@
+- title: Welcome
+  docs:
+  - home
+
+- title: Datasets
+  docs:
+  - dataset_overview
+  - nodeprop
+  - linkprop
+  - graphprop
+
+- title: Leaderboard
+  docs:
+  - leader_overview
+  - leader_nodeprop
+  - leader_linkprop
+  - leader_graphprop
+
+- title: Frequently Asked Questions
+  docs:
+  - faq

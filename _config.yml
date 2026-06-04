@@ -1,0 +1,56 @@
+# Site settings
+title: Adversarial Graph Benchmark
+email: research@agb-project.org
+description: >
+  Evaluating graph neural network robustness with topology-aware adversarial attacks.
+lang: en-US
+
+baseurl: "/" # the subpath of your site, e.g. /blog/
+url: https://example.com # update when deploying
+git_address: https://github.com/your-org/agb
+paper_address: https://arxiv.org/abs/2502.06918
+git_edit_address: https://github.com/your-org/agb
+
+# theme options from https://bootswatch.com/3/
+# comment out this to use default Bootstrap
+bootwatch: paper # cerulean cosmo custom cyborg darkly flatly journal lumen readable sandstone simplex slate solar spacelab superhero united yeti
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+# Plugins (previously gems:)
+plugins:
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - data/
+  - deploy/
+  - dist/
+  - node_modules/
+  - package.json
+  - package-lock.json
+  - scripts/
+  - agb.zip
+  - Gemfile
+  - Gemfile.lock
+  - .idea/
+  - .gitignore
+  - README.md
+  - _docs/
+  - _data/docs.yml
+  - test-dev_leaderboard.csv
+  - test-dev_master.csv
+  - lsc_submission/
+  - update.sh
+  - update_lsc.sh
+  - update_leaderboard.py
+  - update_lsc_leaderboard.py
+  - update_kddcup2021_leaderboard.py
+  - merge_lsc_leaderboard.py
+  - retrieve_lsc_registration.py
+#timezone: USA/Berlin
+defaults: []
+collections: {}
