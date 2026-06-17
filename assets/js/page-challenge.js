@@ -42,7 +42,7 @@ const sections = [
     icon: "fa-trophy",
     body:
       "The AGB leaderboards summarize adversarial attack performance across datasets, victim models, attack settings, and budgets. Higher misclassification rates indicate stronger attack performance.",
-    cta: { label: "View Leaderboard", href: "/leaderboard/" }
+    cta: { label: "View Leaderboard", useLeaderboardHref: true }
   },
   {
     id: "agb-paper",
@@ -63,6 +63,8 @@ const sections = [
 const root = document.getElementById("page-root");
 
 if (root) {
+  const leaderboardHref = root.dataset.leaderboardHref || "/leaderboard/";
+
   const sectionHtml = sections
     .map(
       (section, index) => `
@@ -74,7 +76,7 @@ if (root) {
       <p class="agb-challenge-section-text">${section.body}</p>
       ${
         section.cta
-          ? `<p class="agb-challenge-section-action"><a class="btn btn-lg agb-btn-blue" href="${section.cta.href}">${section.cta.label}</a></p>`
+          ? `<p class="agb-challenge-section-action"><a class="btn btn-lg agb-btn-blue" href="${section.cta.useLeaderboardHref ? leaderboardHref : section.cta.href}">${section.cta.label}</a></p>`
           : ""
       }
     </section>

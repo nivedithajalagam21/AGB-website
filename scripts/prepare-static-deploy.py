@@ -53,6 +53,7 @@ def rewrite_text(text: str, *, is_under_assets_js: bool) -> str:
         s = rep(rf"href='/{slug}/#", f"href='{slug}.html#", s)
         s = rep(rf'href="/{slug}/?"', f'href="{slug}.html"', s)
         s = rep(rf"href='/{slug}/?'", f"href='{slug}.html'", s)
+        s = rep(rf'data-leaderboard-href="/{slug}/?"', f'data-leaderboard-href="{slug}.html"', s)
 
     # Legacy / removed from main nav but may appear in old content
     s = rep(r'href="/methodology/?"', 'href="methodology.html"', s)

@@ -1,6 +1,8 @@
 const root = document.getElementById("page-root");
 
 if (root) {
+  const leaderboardHref = root.dataset.leaderboardHref || "/leaderboard/";
+
   root.innerHTML = `
     <div class="agb-home">
       <section class="agb-home-hero agb-reveal">
@@ -40,7 +42,7 @@ if (root) {
                   <i class="fa fa-compass" aria-hidden="true"></i>
                   Get Started
                 </a>
-                <a class="btn btn-lg agb-hero-btn agb-hero-btn--glass" href="/leaderboard/">
+                <a class="btn btn-lg agb-hero-btn agb-hero-btn--glass" href="${leaderboardHref}">
                   <i class="fa fa-bar-chart" aria-hidden="true"></i>
                   AGB LSC
                 </a>
